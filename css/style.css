@@ -704,7 +704,7 @@ label {
 
 /* Parallax */
 .parallax{
-    background-image: url(/img/parallax.jpg);
+    background-image: url(../img/parallax.jpg);
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
