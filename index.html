@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Construct</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      crossorigin="anonymous"
+    />
+    <link rel="icon" href="./img/ico/logo.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/media/phone.css">
+    <link rel="stylesheet" href="./css/animate.css" />
+    <link rel="stylesheet" href="./css/carrousel.css" />
+    <link rel="stylesheet" href="./css/fancybox.css" />
+  </head>
+  <body>
+    <header class="header-bg">
+      <div class="container header">
+        <div class="info">
+          <i class="fa-regular fa-envelope"></i>
+          <span style="margin-right: 50px">info@example.com</span>
+          <i class="fa-solid fa-location-dot"></i>
+          <span>15/A, Nest Tower, NYC</span>
+        </div>
+        <div class="social-icons">
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <div class="quote">
+            <a href="#">Get A Quote</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <nav class="menu-bg">
+      <div class="container menu">
+        <div class="logo">
+          <a href="#"><img src="./img/logo.png" alt="Logo" width="40" /></a>
+        </div>
+        <div class="nav">
+          <a class="nav__links" href="#">Home</a>
+          <a class="nav__links" href="#about">About</a>
+          <a class="nav__links" href="#services">Services</a>
+          <a class="nav__links" href="#specialization">Specialization</a>
+          <a class="nav__links" href="#blog">Blog</a>
+        </div>
+        <div class="icons">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <i class="fa-regular fa-user"></i>
+          <i class="fa-solid fa-cart-shopping cart"></i>
+          <div class="hamburger" id="hamburger">
+            <i class="fas fa-bars"></i>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="mobile-menu" id="nav">
+      <figure class="logo-nav">
+        <img src="./img/logo.png" alt="construct" />
+        <i class="fa-solid fa-x close-btn"></i>
+      </figure>
+      <div class="search">
+        <input type="text" placeholder="Search..." />
+        <div class="search__icon">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+      </div>
+      <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#specialization">Specialization</a>
+        <a href="#blog">Blog</a>
+      </div>
+      <div class="account">
+        <div class="user" style="margin-bottom: 1rem">
+          <i class="fa-regular fa-user"></i>
+          <span>My Account</span>
+        </div>
+        <div class="heart">
+          <i class="fa-regular fa-heart"></i>
+          <span>Wishlist</span>
+        </div>
+      </div>
+    </div>
+
+    <section class="callbacks silder">
+      <ul class="rslides" id="slider">
+        <li><img src="./img/slide/1.jpg" alt="" /></li>
+        <li><img src="./img/slide/2.png" alt="" /></li>
+      </ul>
+      <div class="slide__information">
+        <div class="slide__subtitle wow animate__animated animate__fadeInUp">
+          <i class="fa-solid fa-square"></i>
+          <span>great experience in building</span>
+        </div>
+        <h2 class="slide__title">Highest Standards Of Construction</h2>
+        <p class="slide__text">
+          All types of work - from designing and laying the Foundation finishing
+          and commissioning. Tight deadlines, reasonable.
+        </p>
+        <a
+          class="slide__btn animate__animated animate__pulse animate__infinite"
+          href="#"
+          id="open"
+          >Make An Enquiry</a
+        >
+      </div>
+    </section>
+
+    <div class="modal-overlay" id="modal">
+      <div class="modal">
+        <div class="icon">
+          <i class="fa-solid fa-xmark" id="close"></i>
+        </div>
+        <form
+          id="formulario"
+          class="form"
+          action="https://formsubmit.co/alfredoek50@gmail.com"
+          method="POST"
+        >
+          <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="name" name="nombre" placeholder="Nombre:" />
+            <span class="error" id="errorName"></span>
+          </div>
+          <div class="form-group">
+            <label for="correo">Correo</label>
+            <input
+              type="email"
+              id="email"
+              name="correo"
+              placeholder="Correo:"
+            />
+            <span class="error" id="errorEmail"></span>
+          </div>
+          <div class="form-group">
+            <label for="telefono">Teléfono</label>
+            <input
+              type="text"
+              id="phone"
+              name="telefono"
+              placeholder="Teléfono"
+            />
+            <span class="error" id="errorPhone"></span>
+          </div>
+          <div class="form-group">
+            <label for="mensaje">Mensaje</label>
+            <textarea
+              id="message"
+              name="mensaje"
+              placeholder="Ingresa tu mensaje:"
+            ></textarea>
+            <span class="error" id="errorMessage"></span>
+          </div>
+          <button class="slide__btn" type="submit">Enviar</button>
+        </form>
+        
+      </div>
+    </div>
+
+    <section class="container">
+      <div class="cards">
+        <article class="card">
+          <i class="fa-solid fa-car card__icon"></i>
+          <h3 class="card__title">Accreditation</h3>
+          <a class="card__arrow" href="#"
+            ><i class="fa-solid fa-arrow-right"></i
+          ></a>
+        </article>
+
+        <article class="card">
+          <i class="fa-solid fa-truck-pickup card__icon"></i>
+          <h3 class="card__title">Mechanical E.</h3>
+          <a class="card__arrow" href="#"
+            ><i class="fa-solid fa-arrow-right"></i
+          ></a>
+        </article>
+
+        <article class="card">
+          <i class="fa-solid fa-building card__icon"></i>
+          <h3 class="card__title">Architecture</h3>
+          <a class="card__arrow" href="#"
+            ><i class="fa-solid fa-arrow-right"></i
+          ></a>
+        </article>
+
+        <article class="card">
+          <i class="fa-solid fa-bed card__icon"></i>
+          <h3 class="card__title">Interior Desing</h3>
+          <a class="card__arrow" href="#"
+            ><i class="fa-solid fa-arrow-right"></i
+          ></a>
+        </article>
+      </div>
+    </section>
+
+    <section class="container about-us" id="about">
+      <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/hB6iPi9XA_c?si=ILW919f-EAUlDG52" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+      <div class="about">
+        <div class="slide__subtitle wow animate__animated animate__slideInUp">
+          <i class="fa-solid fa-square"></i>
+          <span>great experience in building</span>
+        </div>
+        <h2 class="slide__title wow animate__animated animate__slideInUp">Solutions For Residentials & Industries!</h2>
+        <p class="about__text-bd">
+          Construction is a general term meaning the art and science to form
+          objects systems organizations, and comes from Latin
+        </p>
+        <p class="about__text">
+          Construction is a general term meaning the art and science to form
+          objects systems organizations, and comes from Latin construction and
+          Old French construction. To construct is the verb: the act of
+          building, and the noun
+        </p>
+        <div class="about-btn">
+          <a class="slide__btn" href="#">About Us</a>
+          <div class="about__name">
+            <img src="./img/firma.png" alt="Firma" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-img">
+      <div class="company container">
+        <div class="company-text">
+          <h2 class="company__title">
+            A Company Involved In Service, Maintenance
+          </h2>
+          <a class="slide__btn" href="#">Get Appointment</a>
+        </div>
+        <figure class="company-img">
+          <img src="./img/constructor.png" alt="obrero" />
+        </figure>
+      </div>
+    </section>
+
+    <section class="container" id="services">
+      <div class="solution-pd">
+        <div class="slide__subtitle slide__subtitle--center wow animate__animated animate__slideInUp">
+          <i class="fa-solid fa-square"></i>
+          <span>our services</span>
+        </div>
+        <h2 class="slide__title slide__title--center wow animate__animated animate__slideInUp">Construction Solution</h2>
+        <div class="grid">
+          <article class="solution">
+            <i class="fa-solid fa-building solution__icon"></i>
+            <h3 class="solution__construction">Industrial construction</h3>
+            <p class="solution__text">
+              over 1 million+ homes for sale available on the website, we can
+              match you with a house you will want to call home.
+            </p>
+            <div class="solution__btn">
+              <a href="#">Service Details</a>
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </article>
+
+          <article class="solution">
+            <i class="fa-solid fa-truck-pickup solution__icon"></i>
+            <h3 class="solution__construction">Oil Gas & Power Plant</h3>
+            <p class="solution__text">
+              over 1 million+ homes for sale available on the website, we can
+              match you with a house you will want to call home.
+            </p>
+            <div class="solution__btn">
+              <a href="#">Service Details</a>
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </article>
+
+          <article class="solution">
+            <i class="fa-solid fa-screwdriver-wrench solution__icon"></i>
+            <h3 class="solution__construction">Mechanical Works</h3>
+            <p class="solution__text">
+              over 1 million+ homes for sale available on the website, we can
+              match you with a house you will want to call home.
+            </p>
+            <div class="solution__btn">
+              <a href="#">Service Details</a>
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </article>
+
+          <article class="solution">
+            <i class="fa-solid fa-solar-panel solution__icon"></i>
+            <h3 class="solution__construction">Power & Energy</h3>
+            <p class="solution__text">
+              over 1 million+ homes for sale available on the website, we can
+              match you with a house you will want to call home.
+            </p>
+            <div class="solution__btn">
+              <a href="#">Service Details</a>
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </article>
+
+          <article class="solution">
+            <i class="fa-solid fa-gas-pump solution__icon"></i>
+            <h3 class="solution__construction">Petroleum Refinery</h3>
+            <p class="solution__text">
+              over 1 million+ homes for sale available on the website, we can
+              match you with a house you will want to call home.
+            </p>
+            <div class="solution__btn">
+              <a href="#">Service Details</a>
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </article>
+
+          <article class="solution">
+            <i class="fa-solid fa-house solution__icon"></i>
+            <h3 class="solution__construction">Interior Desing</h3>
+            <p class="solution__text">
+              over 1 million+ homes for sale available on the website, we can
+              match you with a house you will want to call home.
+            </p>
+            <div class="solution__btn">
+              <a href="#">Service Details</a>
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="specialization-section" id="specialization">
+      <div class="text-container">
+        <small class="wow animate__animated animate__slideInUp">GREAT EXPERIENCE IN BUILDING</small>
+        <h2 class="wow animate__animated animate__slideInUp">Our Specialization & Company Features</h2>
+        <div class="features">
+          <ul class="features-list">
+            <li>
+              <i class="fa-solid fa-check check-icon"></i> Living rooms are
+              pre-wired for Surround
+            </li>
+            <li>
+              <i class="fa-solid fa-check check-icon"></i> Nestled in the
+              Buckhead Vinings communities
+            </li>
+            <li>
+              <i class="fa-solid fa-check check-icon"></i> A rare combination of
+              inspired architecture
+            </li>
+          </ul>
+          <ul class="features-list">
+            <li>
+              <i class="fa-solid fa-check check-icon"></i> Luxurious interior
+              design and amenities
+            </li>
+            <li>
+              <i class="fa-solid fa-check check-icon"></i> Private balconies
+              with stunning views
+            </li>
+            <li>
+              <i class="fa-solid fa-check check-icon"></i> Outdoor grilling with
+              dining court
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="image-container">
+        <img src="./img/especializacion.jpg" alt="Construction workers" />
+      </div>
+    </section>
+
+    <section class="container gallery-pd">
+      <div class="slide__subtitle slide__subtitle--center wow animate__animated animate__slideInUp">
+        <i class="fa-solid fa-square"></i>
+        <span>our expert worker</span>
+      </div>
+      <h2 class="slide__title slide__title--center wow animate__animated animate__slideInUp">Our Expert Worker</h2>
+      <div class="gallery">
+        <article class="gallery-card">
+          <a
+            href="./img/gallery/1.jpg"
+            data-fancybox="gallery"
+            data-caption="Foto 1"
+          >
+            <figure class="gallery__img">
+              <img src="./img/gallery/1.jpg" alt="" />
+            </figure>
+          </a>
+          <div class="gallery-content">
+            <h3>Rosalina D. William</h3>
+            <p>TECHNOLOGY OFFICER</p>
+          </div>
+          <div class="gallery-hover">
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="gallery-card">
+          <a
+            href="./img/gallery/2.jpg"
+            data-fancybox="gallery"
+            data-caption="Foto 2"
+          >
+            <figure class="gallery__img">
+              <img src="./img/gallery/2.jpg" alt="" />
+            </figure>
+          </a>
+          <div class="gallery-content">
+            <h3>Kelian Anderson</h3>
+            <p>ENGINEERING OFFICER</p>
+          </div>
+          <div class="gallery-hover">
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="gallery-card">
+          <a
+            href="./img/gallery/3.jpg"
+            data-fancybox="gallery"
+            data-caption="Foto 3"
+          >
+            <figure class="gallery__img">
+              <img src="./img/gallery/3.jpg" alt="" />
+            </figure>
+          </a>
+          <div class="gallery-content">
+            <h3>Miranda H. Halim</h3>
+            <p>PROPERTY SELLER</p>
+          </div>
+          <div class="gallery-hover">
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="percent-content">
+        <article class="percent">
+          <figure class="percent__img">
+            <img src="./img/porcent/78porciento.jpg" alt="78%" />
+          </figure>
+          <h3 class="percent__title">project done</h3>
+          <p class="percent__text">Construction Simulator</p>
+        </article>
+
+        <article class="percent">
+          <figure class="percent__img">
+            <img src="./img/porcent/62porciento.jpg" alt="62%" />
+          </figure>
+          <h3 class="percent__title">country cover</h3>
+          <p class="percent__text">Construction Simulator</p>
+        </article>
+
+        <article class="percent">
+          <figure class="percent__img">
+            <img src="./img/porcent/50porciento.jpg" alt="50%" />
+          </figure>
+          <h3 class="percent__title">completed co.</h3>
+          <p class="percent__text">Construction Simulator</p>
+        </article>
+
+        <article class="percent">
+          <figure class="percent__img">
+            <img src="./img/porcent/90porciento.jpg" alt="90%" />
+          </figure>
+          <h3 class="percent__title">happy clients</h3>
+          <p class="percent__text">Construction Simulator</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="container carrusel" id="carousel">
+      <div class="slide__subtitle slide__subtitle--center wow animate__animated animate__slideInUp">
+        <i class="fa-solid fa-square"></i>
+        <span>client,s testimonial</span>
+      </div>
+      <h2 class="slide__title slide__title--center wow animate__animated animate__slideInUp">Client,S Feedback</h2>
+      <div class="currusel-content" id="slide-container">
+        <article class="carrusel-testimonial slide" data-slideIndex="0">
+          <div class="testimonial">
+            <img
+              src="./img/testimonial/1.jpg"
+              alt="Jacob William"
+              class="profile-pic"
+            />
+            <div class="carrusel-info">
+              <h3 class="name">Jacob William</h3>
+              <p class="role">SELLING AGENTS</p>
+            </div>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+          <p class="carrusel-text">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem
+            alias omnis assumenda facilis ea optio dicta a ipsa obcaecati. Saepe
+            pariatur velit delectus quo voluptas?
+          </p>
+        </article>
+
+        <article class="carrusel-testimonial slide" data-slideIndex="1">
+          <div class="testimonial">
+            <img
+              src="./img/testimonial/2.jpg"
+              alt="Jacob William"
+              class="profile-pic"
+            />
+            <div class="carrusel-info">
+              <h3 class="name">Jacob William</h3>
+              <p class="role">SELLING AGENTS</p>
+            </div>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+          <p class="carrusel-text">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem
+            alias omnis assumenda facilis ea optio dicta a ipsa obcaecati. Saepe
+            pariatur velit delectus quo voluptas?
+          </p>
+        </article>
+
+        <article class="carrusel-testimonial slide" data-slideIndex="2">
+          <div class="testimonial">
+            <img
+              src="./img/testimonial/3.jpg"
+              alt="Jacob William"
+              class="profile-pic"
+            />
+            <div class="carrusel-info">
+              <h3 class="name">Jacob William</h3>
+              <p class="role">SELLING AGENTS</p>
+            </div>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+          <p class="carrusel-text">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem
+            alias omnis assumenda facilis ea optio dicta a ipsa obcaecati. Saepe
+            pariatur velit delectus quo voluptas?
+          </p>
+        </article>
+
+        <article class="carrusel-testimonial slide" data-slideIndex="3">
+          <div class="testimonial">
+            <img
+              src="./img/testimonial/4.jpg"
+              alt="Jacob William"
+              class="profile-pic"
+            />
+            <div class="carrusel-info">
+              <h3 class="name">Jacob William</h3>
+              <p class="role">SELLING AGENTS</p>
+            </div>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+          <p class="carrusel-text">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem
+            alias omnis assumenda facilis ea optio dicta a ipsa obcaecati. Saepe
+            pariatur velit delectus quo voluptas?
+          </p>
+        </article>
+      </div>
+      <div class="slide-buttons">
+        <a  id="back-button" class="arrow back"
+          ><i class="fa-solid fa-chevron-left"></i
+        ></a>
+        <a  id="forward-button" class="arrow forward"
+          ><i class="fa-solid fa-chevron-right"></i
+        ></a>
+      </div>
+      <div class="slide-indicators">
+        <a href="#" class="slide-indicator active"></a>
+        <a href="#" class="slide-indicator"></a>
+        <a href="#" class="slide-indicator"></a>
+        <a href="#" class="slide-indicator"></a>
+      </div>
+    </section>
+
+    <section class="parallax"></section>
+
+    <section class="container" id="blog">
+      <div class="slide__subtitle slide__subtitle--center wow animate__animated animate__slideInUp">
+        <i class="fa-solid fa-square"></i>
+        <span>news & blogs</span>
+      </div>
+      <h2 class="slide__title slide__title--center wow animate__animated animate__slideInUp">
+        See Our Leatest news & Read Blogs
+      </h2>
+      <div class="blog-content">
+        <article class="blog">
+          <figure class="blog__figure">
+            <img src="./img/blog/1.jpg" alt="Decorate" />
+          </figure>
+          <div class="blog__meta">
+            <ul>
+              <li>
+                <a class="blog__meta-link" href="#"
+                  ><i class="far fa-user"></i>by: Admin</a
+                >
+              </li>
+              <li>
+                <a class="blog__meta-link" href="#"
+                  ><i class="fas fa-tags"></i>Decorate</a
+                >
+              </li>
+            </ul>
+          </div>
+          <h3 class="blog-tile">10 Brillants Ways To Decorate Your Home</h3>
+          <div class="blog__btn">
+            <div class="blog__btn-meta">
+              <ul>
+                <li class="blog__btn-date">
+                  <i class="far fa-calendar-alt"></i>June 24, 2021
+                </li>
+              </ul>
+            </div>
+            <div class="blog__btn-link">
+              <a href="#">read more</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="blog">
+          <figure class="blog__figure">
+            <img src="./img/blog/2.jpg" alt="Interior" />
+          </figure>
+          <div class="blog__meta">
+            <ul>
+              <li>
+                <a class="blog__meta-link" href="#"
+                  ><i class="far fa-user"></i>by: Admin</a
+                >
+              </li>
+              <li>
+                <a class="blog__meta-link" href="#"
+                  ><i class="fas fa-tags"></i>Interior</a
+                >
+              </li>
+            </ul>
+          </div>
+          <h3 class="blog-tile">The Most Inspiring Interior Desing Of 2021</h3>
+          <div class="blog__btn">
+            <div class="blog__btn-meta">
+              <ul>
+                <li class="blog__btn-date">
+                  <i class="far fa-calendar-alt"></i>July 23, 2021
+                </li>
+              </ul>
+            </div>
+            <div class="blog__btn-link">
+              <a href="#">read more</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="blog">
+          <figure class="blog__figure">
+            <img src="./img/blog/3.jpg" alt="Estate" />
+          </figure>
+          <div class="blog__meta">
+            <ul>
+              <li>
+                <a class="blog__meta-link" href="#"
+                  ><i class="far fa-user"></i>by: Admin</a
+                >
+              </li>
+              <li>
+                <a class="blog__meta-link" href="#"
+                  ><i class="fas fa-tags"></i>Estate</a
+                >
+              </li>
+            </ul>
+          </div>
+          <h3 class="blog-tile">Recent Commercial Real Estate Transaction</h3>
+          <div class="blog__btn">
+            <div class="blog__btn-meta">
+              <ul>
+                <li class="blog__btn-date">
+                  <i class="far fa-calendar-alt"></i>June 24, 2021
+                </li>
+              </ul>
+            </div>
+            <div class="blog__btn-link">
+              <a href="#">read more</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <footer class="footer-bg">
+      <div class="footer container">
+        <div class="footer-company">
+          <img src="./img/footer/1.png" alt="1" />
+          <img class="display-phone" src="./img/footer/2.png" alt="2" />
+          <img class="display-phone" src="./img/footer/3.png" alt="3" />
+          <img class="display-tb display-phone" src="./img/footer/4.png" alt="4" />
+          <img class="display-tb display-phone" src="./img/footer/5.png" alt="5" />
+        </div>
+        <div class="footer-content">
+          <div class="footer-col">
+            <div>
+              <a href="#"><img src="./img/footer/logo-2.png" alt="Logo" /></a>
+            </div>
+            <p class="footer__text">
+              Lorem Ipsum is simply dummy text of the and typesetting industry.
+              Lorem Ipsum is dummy text of the printing.
+            </p>
+            <div class="footer-address">
+              <ul>
+                <li class="footer__adrress-li">
+                  <i class="fa-solid fa-location-dot"></i>Brooklyn, New York,
+                    United States
+                </li>
+                <li class="footer__adrress-li"><i class="fa-solid fa-phone"></i>+0123-456789</li>
+                <li class="footer__adrress-li">
+                  <i class="fa-regular fa-envelope"></i>example@example.com
+                </li>
+              </ul>
+            </div>
+            <div class="footer-icons">
+              <ul>
+                <li>
+                  <a class="footer__icon-link" href="#"><i class="fab fa-facebook-f"></i></a>
+                </li>
+                <li>
+                  <a class="footer__icon-link" href="#"><i class="fab fa-twitter"></i></a>
+                </li>
+                <li>
+                  <a class="footer__icon-link" href="#"><i class="fab fa-linkedin"></i></a>
+                </li>
+                <li>
+                  <a class="footer__icon-link" href="#"><i class="fab fa-youtube"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h3>Company</h3>
+            <ul class="footer__ul">
+              <li><a href="#">About</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">All Products</a></li>
+              <li><a href="#">Location Maps</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h3>Services</h3>
+            <ul class="footer__ul">
+              <li><a href="#">Order tracking</a></li>
+              <li><a href="#">Wish List</a></li>
+              <li><a href="#">Login</a></li>
+              <li><a href="#">My account</a></li>
+              <li><a href="#">Terms & Conditions</a></li>
+              <li><a href="#">Promotional Offers</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h3>Customer Care</h3>
+            <ul class="footer__ul">
+              <li><a href="#">Login</a></li>
+              <li><a href="#">My account</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Wish List</a></li>
+              <li><a href="#">Order tracking</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h3 class="footer-title">Newsletter</h3>
+            <p>Subscribe to our weekly Newsletter and receive updates via email.</p>
+            <div class="footer-input">
+              <input type="email" placeholder="Email*" required>
+              <button type="submit" class="send-button">
+                <i class="fa fa-paper-plane"></i>
+              </button>
+            </div>
+            <h3>We Accept</h>
+              <img src="./img/footer/pays.png" alt="Pays">
+              <div class="footer__btn-top">
+                <a href="#" id="backTop"><i class="fa-solid fa-angle-up"></i></a>
+              </div>
+          </div>
+        </div>
+      </div>
+      
+    </footer>
+    <div class="footer-reserved-bg">
+      <div class="container footer-reserved">
+        <p>All Rights Reserved @ Company 2024</p>
+        <ul class="footer-reserved-ul">
+          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#">Claim</a></li>
+          <li><a href="#">Privacy</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <script src="./js/responsiveslides.min.js"></script>
+    <script src="./js/wow.min.js"></script>
+    <script src="./js/app.js"></script>
+    <script src="./js/carrousel.js"></script>
+    <script src="./js/fancybox.js"></script>
+    <script src="./js/menuFixed.js"></script>
+    <script>
+      //menu
+      $(document).ready(function () {
+        $("#hamburger").click(function () {
+          $("#nav").toggleClass("active");
+        });
+
+        $(".close-btn").click(function () {
+          $("#nav").removeClass("active");
+        });
+      });
+
+      //Modal
+      $("#open").click(function () {
+        $("#modal").addClass("display");
+      });
+      $("#close").click(function () {
+        $("#modal").removeClass("display");
+      });
+
+      //Slide
+      $(document).ready(function () {
+        function updateSlideTextPosition(index) {
+          const slideInfo = $(".slide__information");
+
+          if (index === 0) {
+            slideInfo.css({
+              left: "6rem",
+              right: "auto",
+              textAlign: "left",
+            });
+          } else if (index === 1) {
+            slideInfo.css({
+              right: "6rem",
+              left: "auto",
+              textAlign: "right",
+            });
+          }
+        }
+        // Inicializar el slider
+        $("#slider").responsiveSlides({
+          auto: true,
+          pager: false,
+          nav: true,
+          speed: 500,
+          namespace: "callbacks",
+          before: function (index) {
+            updateSlideTextPosition(index);
+          },
+        });
+        $(".callbacks_nav").on("click", function () {
+          const currentSlide = $(".callbacks_on").index();
+          updateSlideTextPosition(currentSlide);
+        });
+      });
+
+      $(".callbacks_nav").on("click", function () {
+        const currentSlide = $(".callbacks_on").index();
+        updateSlideTextPosition(currentSlide);
+      });
+
+      new WOW().init();
+
+      Fancybox.bind('[data-fancybox="gallery"]', {});
+
+      $('#backTop').click(function () {
+      $('body,html').animate({ scrollTop: 0 }, 500);
+      return false;
+    });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+@media (max-width: 430px) {
+    .header {display: block;}
+    .menu {
+        flex-direction: column;
+    }
+    .menu-fixed{position: relative;}
+    .mobile-menu {width: 70%;}
+    .display-phone{display: none;}
+    .rslides img {
+        height: 120rem;
+    }
+    .slide__title{font-size: 2.5rem;}
+    .cards,
+    .grid,
+    .gallery,
+    .percent-content,
+    .blog-content,
+    .footer-content{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2rem;
+    }
+    .gallery{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 2rem;
+    }
+    .gallery-hover {opacity: 1;}
+    .features {padding: 0 3rem;} 
+    .video-container {
+        min-width: 37rem;
+    }
+}
