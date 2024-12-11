@@ -726,6 +726,56 @@
       </div>
     </section>
 
+        <section class="container trigger-pd">
+      <div class="trigger">
+        <h2 class="">Jhon Tyler</h2>
+        <i class="fa-solid fa-plus"></i>
+      </div>
+      <div class="content">
+        <figure>
+          <img src="./img/trigger/1.jpg" alt="Jhon" />
+        </figure>
+        <h3>Director of Client Strategy</h3>
+        <div class="icons">
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-pinterest-p"></i>
+          <i class="fab fa-instagram"></i>
+        </div>
+      </div>
+
+      <div class="trigger">
+        <h2>Stuart Williams</h2>
+        <i class="fa-solid fa-plus"></i>
+      </div>
+      <div class="content">
+        <figure>
+          <img src="./img/trigger/2.jpg" alt="Stuart" />
+        </figure>
+        <h3>Account Directory</h3>
+        <div class="icons">
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-pinterest-p"></i>
+          <i class="fab fa-instagram"></i>
+        </div>
+      </div>
+
+      <div class="trigger">
+        <h2>Corey Lopez</h2>
+        <i class="fa-solid fa-plus"></i>
+      </div>
+      <div class="content">
+        <figure>
+          <img src="./img/trigger/3.jpg" alt="Corey" />
+        </figure>
+        <h3>Account Directory</h3>
+        <div class="icons">
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-pinterest-p"></i>
+          <i class="fab fa-instagram"></i>
+        </div>
+      </div>
+    </section>
+
     <footer class="footer-bg">
       <div class="footer container">
         <div class="footer-company">
@@ -914,6 +964,12 @@
       new WOW().init();
 
       Fancybox.bind('[data-fancybox="gallery"]', {});
+
+      $(".trigger").click(function () {
+        var t = $(this);
+        var tp = t.next();
+        tp.slideToggle();
+      });
 
       $('#backTop').click(function () {
       $('body,html').animate({ scrollTop: 0 }, 500);
