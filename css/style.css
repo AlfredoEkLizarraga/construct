@@ -763,6 +763,44 @@ label {
 }
 .blog__figure img:hover{transform: scale(1.2);}
 
+/* Trigger */
+.trigger-pd{padding: 0 0 12rem 0;}
+.trigger{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 0;
+    background-color: var(--blue);
+    margin-bottom: 2rem;
+}
+.trigger h2{
+    font-weight: 200;
+    margin: 0 0 0 2rem;
+    color: var(--orange);
+}
+.trigger i{
+    background-color: var(--orange);
+    padding: 1rem;
+    border-radius: 50%;
+    margin: 0 2rem 0 0;
+    font-size: 2.5rem;
+    color: var(--blueTeam);
+}
+.content{
+    display: none;
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 2rem 0;
+    margin: -2rem 0 2rem 0;
+}
+.content h3{color: var(--orange);}
+.content figure img{height: 30rem; width: 90%; margin: auto;}
+.icons i{
+    color: var(--blueIcons);
+    background: var(--gray);
+    padding: 1rem;
+    border-radius: 50%;
+}
+
 /* Footer */
 .footer-bg{
     background-color: var(--blueFooter);
