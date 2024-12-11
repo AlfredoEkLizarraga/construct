@@ -864,6 +864,16 @@
       $("#close").click(function () {
         $("#modal").removeClass("display");
       });
+      window.onclick = function (ev) {
+        if (ev.target == modal) {
+          $("#modal").removeClass("display");
+        }
+      };
+      document.addEventListener("keydown", function (ev) {
+        if (ev.key === "Escape") {
+          $("#modal").removeClass("display");
+        }
+      });
 
       //Slide
       $(document).ready(function () {
